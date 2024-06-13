@@ -82,7 +82,8 @@ function main(model) {
     function showTweet(e) {
         const tweetText = $(e.target.parentNode.parentNode).children()
         $(tweetText[0]).removeClass('hidden')
-        $(tweetText[1]).removeClass('flex').addClass('hidden')
+        const tweetHider = $(tweetText[1]).attr('akunin') === 'tweetHider' ? $(tweetText[1]) : $(tweetText[2])
+        tweetHider.removeClass('flex').addClass('hidden')
     }
 }
 
